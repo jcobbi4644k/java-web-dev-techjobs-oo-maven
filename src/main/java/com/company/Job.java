@@ -80,5 +80,49 @@ public class Job {
         this.name = name;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Job)) return false;
+        Job job = (Job) o;
+        return id == job.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+//    @Override
+//    public  String toString() {
+//        String name = this.getName();
+//        String employer = this.getEmployer().getValue();
+//        String location = this.getLocation().getValue();
+//        String positionType = this.getPositionType().getValue();
+//        String coreCompetency = this.getCoreCompetency().getValue();
+//
+//        if (this.getName().isEmpty()) {
+//            name = "Data Not Available";
+//        }else if (this.getEmployer().getValue().isEmpty()) {
+//            employer = "Data Not Available";
+//        } else if (this.getLocation().getValue().isEmpty()); {
+//            location = "Data Not Available";
+//        } else if (this.getPositionType().getValue().isEmpty()){
+//            positionType = "Data Not Available";
+//        } else if (this.getCoreCompetency().getValue().isEmpty()) {
+//            coreCompetency = "Data Not Available";
+//        }
+//
+//        return "\n" +
+//                "ID: " + id +
+//                "\nName: "  + name +
+//                "\nEmployer: " + employer +
+//                "\nLocation: " + location +
+//                "\nPosition Type: " + positionType +
+//                "\nCore Competency: " + coreCompetency +
+//                "\n";
+//
+//    }
+
 
 }
