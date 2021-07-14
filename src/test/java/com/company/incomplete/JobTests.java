@@ -29,8 +29,11 @@ public class JobTests {
         assertTrue(job3.getLocation() instanceof Location);
         assertEquals("Desert", job3.getLocation().getValue());
         assertTrue(job3.getEmployer() instanceof Employer);
+        assertEquals("ACME", job3.getEmployer().getValue());
         assertTrue(job3.getPositionType() instanceof PositionType);
+        assertEquals("Quality control", job3.getPositionType().getValue());
         assertTrue(job3.getCoreCompetency() instanceof CoreCompetency);
+        assertEquals("Persistence", job3.getCoreCompetency().getValue());
         assertTrue(job3.getName()!= "");
         assertEquals(3,job3.getId());
     }
